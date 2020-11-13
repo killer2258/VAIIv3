@@ -1,0 +1,126 @@
+body {
+    background: url("back.jpg") no-repeat center fixed;
+    background-size: cover;
+}
+
+.navbar {
+    border-radius: 0;
+}
+
+nav {
+    background-color: black;
+}
+
+nav li a {
+    color: red;
+    font-size: 18px;
+}
+
+.nav li {
+    background-color: black;
+}
+
+.navbar-nav li a:hover {
+    background-color: #242323;
+    color: red;
+    transition: background-color 0.5s;
+}
+
+.navbar-header .icon-bar {
+    background-color: red;
+}
+
+.dropdown-menu {
+    padding: 0;
+}
+
+.dropdown-menu li a {
+    color: red;
+}
+
+.navbar-nav li a:focus, .navbar-nav li a:active,
+.dropdown-menu li a:focus, .dropdown-menu li a:active {
+    background-color: #242323 !important;
+    color: red;
+}
+
+.btn {
+    border: none;
+    background-color: black;
+    color: red;
+}
+
+.btn:hover {
+    color: red;
+    background-color: #242323 !important;
+    transition: background-color 0.5s;
+}
+
+.errors p{
+    border: 2px solid red;
+    text-align: center;
+}
+
+.modal-content {
+    background-color: black;
+}
+
+.modal-header {
+    color: red;
+    border-bottom: 1px solid red;
+}
+
+.modal-footer {
+    border-top: 1px solid red;
+}
+
+.in-login-btn:hover {
+    color: red;
+    background-color: #242323;
+    transition: background-color 0.5s;
+}
+
+.container {
+    background-color: rgba(0,0,0,0.7);
+}
+
+.col-lg-8 .row:hover {
+    background-color: rgba(0,0,0,0.8);
+    transition: background-color 0.5s;
+}
+
+.col-lg-6 {
+    padding: 10px;
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .row .col-md-6 img {
+        padding-top: 20px;
+    }
+}
+
+label {
+    color: red;
+}
+
+.hidden {
+    display: none;
+}
+
+input[type='email'], input[type='password'], input[type='text']{
+    background-color: #242323;
+    color: white;
+    border: none;
+}
+
+p {
+    color: white;
+    text-align: justify;
+}
+
+h2, h4 {
+    color: red;
+}
+
+img {
+    width: 100%;
+}
