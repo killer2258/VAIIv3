@@ -38,17 +38,21 @@
                 <li><a href="about_us.html">O nas</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a class="btn btn-primary register <?php if ($_SESSION['login_user'] != ''){echo " hidden"; }?>"  href="register.php#"><span class="glyphicon glyphicon-log-in"></span> Sign up</a></li>
+                <li><a class="btn btn-primary register <?php
+                    if ($_SESSION['login_user'] != ''){echo " hidden"; }
+                    ?>"  href="register.php#"><span class="glyphicon glyphicon-pencil"></span> Sign up</a></li>
                 <li>
-                    <a class="btn btn-primary <?php if ($_SESSION['login_user'] != ''){echo " hidden"; } ?>" data-toggle="modal" data-target="#exampleModal">
+                    <a type="button" class="btn btn-primary <?php
+                    if ($_SESSION['login_user'] != ''){echo " hidden"; }
+                    ?>" data-toggle="modal" data-target="#exampleModal"><span class="glyphicon glyphicon-log-in"></span>
                         Prihlasit
                     </a>
-                    <form method="post" class="hidden">
+                    <form method="post">
                         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <h5 class="modal-title" id="exampleModalLabel">Prihlásenie</h5>
                                     </div>
                                     <div class="modal-body">
                                         <?php include 'errors.php'; ?>
@@ -69,9 +73,14 @@
                         </div>
                     </form>
                 </li>
+
                 <li><a class="btn btn-primary <?php
                     if ($_SESSION['login_user'] == ''){echo " hidden"; }
-                    ?>" href="<?php echo "home.php?logout='1'" ?>"><span class="glyphicon glyphicon-user"></span> Logout</a></li>
+                    ?>" href="profile.php"><span class="glyphicon glyphicon-user"></span> Profil</a></li>
+                <li><a class="btn btn-primary <?php
+                    if ($_SESSION['login_user'] == ''){echo " hidden"; }
+                    ?>" href="<?php echo "home.php?logout='1'" ?>"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
+
             </ul>
         </div>
     </div>

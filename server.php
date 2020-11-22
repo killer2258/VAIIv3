@@ -39,12 +39,32 @@ if (isset($_POST['register'])) {
         }
     }
 
+    $check_query = "SELECT * FROM users WHERE nick='$nick'";
+    $res = mysqli_query($db, $check_query);
+    $res = mysqli_fetch_assoc($res);
+
+    if ($res) {
+        if ($res['nick'] === $nick) {
+            array_push($errors, "Tento nick uz existuje!");
+        }
+    }
+
     if (empty($email)) {
         array_push($errors, "Nezadali ste email!");
     } else {
         $email = check_in($_POST['email']);
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             array_push($errors, "Neplatný email!");
+        }
+    }
+
+    $check_query = "SELECT * FROM users WHERE email='$email'";
+    $res = mysqli_query($db, $check_query);
+    $res = mysqli_fetch_assoc($res);
+
+    if ($res) {
+        if ($res['email'] === $email) {
+            array_push($errors, "Tento email sa uz pouziva!");
         }
     }
 

@@ -56,6 +56,10 @@ nav li a {
     transition: background-color 0.5s;
 }
 
+.errors {
+    margin-top: 10px;
+}
+
 .errors p{
     border: 2px solid red;
     text-align: center;

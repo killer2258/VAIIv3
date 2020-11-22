@@ -100,7 +100,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
-                        <img src="images/001.jpg">
+                        <img src="images/002.jpg">
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <h2>Nadpis</h2>
@@ -109,7 +109,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
-                        <img src="images/001.jpg">
+                        <img src="images/003.jpg">
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <h2>Nadpis</h2>
@@ -118,7 +118,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
-                        <img src="images/001.jpg">
+                        <img src="images/004.jpg">
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <h2>Nadpis</h2>
@@ -127,7 +127,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
-                        <img src="images/001.jpg">
+                        <img src="images/005.jpg">
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <h2>Nadpis</h2>
@@ -136,7 +136,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
-                        <img src="images/001.jpg">
+                        <img src="images/006.jpg">
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <h2>Nadpis</h2>

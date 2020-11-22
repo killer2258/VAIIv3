@@ -100,7 +100,7 @@ include 'server.php';
             </div>
             <div class="row">
                 <div class="col-lg-6 col-md-6">
-                    <img src="images/001.jpg">
+                    <img src="images/002.jpg">
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <h2>Nadpis</h2>
@@ -109,7 +109,7 @@ include 'server.php';
             </div>
             <div class="row">
                 <div class="col-lg-6 col-md-6">
-                    <img src="images/001.jpg">
+                    <img src="images/003.jpg">
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <h2>Nadpis</h2>
@@ -118,7 +118,7 @@ include 'server.php';
             </div>
             <div class="row">
                 <div class="col-lg-6 col-md-6">
-                    <img src="images/001.jpg">
+                    <img src="images/004.jpg">
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <h2>Nadpis</h2>
@@ -127,7 +127,7 @@ include 'server.php';
             </div>
             <div class="row">
                 <div class="col-lg-6 col-md-6">
-                    <img src="images/001.jpg">
+                    <img src="images/005.jpg">
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <h2>Nadpis</h2>
@@ -136,22 +136,12 @@ include 'server.php';
             </div>
             <div class="row">
                 <div class="col-lg-6 col-md-6">
-                    <img src="images/001.jpg">
+                    <img src="images/006.jpg">
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <h2>Nadpis</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mattis ornare lorem, eget convallis arcu rhoncus non. Aenean consectetur, risus vitae sagittis interdum, ligula quam rutrum mi, sed tincidunt ex quam non est. Sed volutpat nisl enim, sed ornare sem rhoncus eget. Sed id facilisis lacus. Curabitur sed semper ante. Cras volutpat nibh sit amet sem lobortis pulvinar. Mauris nulla est.</p>
                 </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-3">
-            <div class="row" style="padding: 0 20px;  min-height: 500px; max-height: 800px">
-                <h2 style="text-align: center">Nadpis</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mattis ornare lorem, eget convallis arcu rhoncus non. Aene</p>
-            </div>
-            <div class="row" style="padding: 0 20px;  min-height: 500px; max-height: 800px">
-                <h2 style="text-align: center">Nadpis</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mattis ornare lorem, eget convallis arcu rhoncus non. Aene</p>
             </div>
         </div>
     </div>
