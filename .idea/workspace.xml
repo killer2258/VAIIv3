@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b746e27-ee65-4db1-a668-5a48a072e49a" name="Default Changelist" comment="" />
+    <list default="true" id="4b746e27-ee65-4db1-a668-5a48a072e49a" name="Default Changelist" comment="Dalsie upravy ohladom prihlasovania">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile_server.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile_server.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,12 +26,16 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.1.9">
     <include_path>
       <path value="$PROJECT_DIR$/../../../../xampp/htdocs/Blog" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jaiir2kQnQdf0g0zdErwI9xdZq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -37,7 +46,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../lis" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -79,11 +88,36 @@
       <workItem from="1605021956818" duration="12073000" />
       <workItem from="1605200041320" duration="790000" />
       <workItem from="1605258825531" duration="11753000" />
+      <workItem from="1605270994065" duration="176000" />
+      <workItem from="1605540638685" duration="624000" />
+      <workItem from="1605613530501" duration="733000" />
+      <workItem from="1605619345132" duration="459000" />
+      <workItem from="1605622140128" duration="496000" />
+      <workItem from="1605623968763" duration="403000" />
+      <workItem from="1605625620661" duration="2244000" />
+      <workItem from="1605635618794" duration="2542000" />
+      <workItem from="1605703474785" duration="2338000" />
+      <workItem from="1605789634029" duration="292000" />
+      <workItem from="1606055090090" duration="898000" />
+      <workItem from="1606057075174" duration="1199000" />
     </task>
+    <task id="LOCAL-00001" summary="Sem">
+      <created>1605271093217</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1605271093218</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Sem" />
+    <MESSAGE value="Dalsie upravy ohladom prihlasovania" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dalsie upravy ohladom prihlasovania" />
   </component>
   <component name="WindowStateProjectService">
     <state x="540" y="180" key="#CLI_Interpreters" timestamp="1604931429091">
@@ -106,10 +140,22 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="552" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.173.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1604943155281" />
+    <state x="585" y="102" key="CommitChangelistDialog2" timestamp="1606055739475">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="585" y="102" key="CommitChangelistDialog2/1920.173.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1606055739475" />
     <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1604931428182">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="740" y="280" key="FileChooserDialogImpl/1920.173.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1604931428182" />
+    <state x="838" y="423" key="Github.ShareDialog" timestamp="1605271044589">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="838" y="423" key="Github.ShareDialog/1920.173.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1605271044589" />
+    <state x="767" y="230" key="Github.UntrackedFilesDialog" timestamp="1605271054831">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="767" y="230" key="Github.UntrackedFilesDialog/1920.173.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1605271054831" />
     <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1604944640870">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -146,10 +192,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="794" y="448" key="NewPhpFileDialog/1920.173.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1605260131629" />
-    <state x="461" y="170" key="SettingsEditor" timestamp="1604931430465">
+    <state x="431" y="145" key="SettingsEditor" timestamp="1605704056409">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="461" y="170" key="SettingsEditor/1920.173.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1604931430465" />
+    <state x="431" y="145" key="SettingsEditor/1920.173.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1605704056409" />
     <state x="49" y="0" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog" timestamp="1604931384691">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

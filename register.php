@@ -1,6 +1,8 @@
 <?php
     include 'server.php';
 ?>
+<!DOCTYPE html>
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -36,16 +38,12 @@
                 <li><a href="about_us.html">O nas</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a class="btn btn-primary register <?php
-                    if ($_SESSION['login_user'] != ''){echo " hidden"; }
-                    ?>"  href="register.php#"><span class="glyphicon glyphicon-log-in"></span> Sign up</a></li>
+                <li><a class="btn btn-primary register <?php if ($_SESSION['login_user'] != ''){echo " hidden"; }?>"  href="register.php#"><span class="glyphicon glyphicon-log-in"></span> Sign up</a></li>
                 <li>
-                    <a type="button" class="btn btn-primary <?php
-                    if ($_SESSION['login_user'] != ''){echo " hidden"; }
-                    ?>" data-toggle="modal" data-target="#exampleModal">
+                    <a class="btn btn-primary <?php if ($_SESSION['login_user'] != ''){echo " hidden"; } ?>" data-toggle="modal" data-target="#exampleModal">
                         Prihlasit
                     </a>
-                    <form method="post">
+                    <form method="post" class="hidden">
                         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
@@ -101,3 +99,4 @@
     </form>
 </div>
 </body>
+</html>

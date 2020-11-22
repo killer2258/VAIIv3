@@ -1,7 +1,6 @@
 <?php
 include 'db_connect.php';
 
-
 ob_start();
 function edit_profile($db) {
 $count = 0;
