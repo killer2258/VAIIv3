@@ -128,7 +128,7 @@ $user_query = $user_query->fetch_assoc();
             </div>
             <form style="width: 80%; margin: auto" class="<?php if ($_GET['state'] != 'edit'){echo 'hidden';}?>" action="<?php edit_profile($db); ?>" method="post">
                 <?php if($_GET['chyba'] == 1) {
-                        echo '<p> Nick musí byť dlhší ako 5 znakov! </p>';
+                        echo '<p> Nespravny nick. </p>';
                     }
 
                     if($_GET['chyba'] == 2) {

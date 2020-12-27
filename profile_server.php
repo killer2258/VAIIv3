@@ -22,6 +22,7 @@ $count = 0;
             }
         }
 
+
         if(!empty($email)) {
             $email = check_in($_POST['email']);
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {

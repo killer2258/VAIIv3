@@ -73,7 +73,6 @@
                         </div>
                     </form>
                 </li>
-
                 <li><a class="btn btn-primary <?php
                     if ($_SESSION['login_user'] == ''){echo " hidden"; }
                     ?>" href="profile.php"><span class="glyphicon glyphicon-user"></span> Profil</a></li>
