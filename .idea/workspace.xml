@@ -5,10 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b746e27-ee65-4db1-a668-5a48a072e49a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/navbar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/upload_post.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/upload_post_form.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/action.php" beforeDir="false" afterPath="$PROJECT_DIR$/action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/navbar_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/navbar_style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profile_server.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile_server.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpg.php" beforeDir="false" afterPath="$PROJECT_DIR$/rpg.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/session.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strategic.php" beforeDir="false" afterPath="$PROJECT_DIR$/strategic.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +112,7 @@
       <workItem from="1606081399248" duration="109000" />
       <workItem from="1606118323985" duration="2785000" />
       <workItem from="1606153727487" duration="188000" />
+      <workItem from="1609081476093" duration="9829000" />
     </task>
     <task id="LOCAL-00001" summary="Sem">
       <created>1605271093217</created>
@@ -125,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606061513616</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Dalsie upravy ohladom prihlasovania">
+      <created>1609081580095</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1609081580095</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,14 +174,14 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="552" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.173.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1604943155281" />
-    <state x="585" y="102" key="CommitChangelistDialog2" timestamp="1606061512931">
+    <state x="585" y="102" key="CommitChangelistDialog2" timestamp="1609081578886">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="585" y="102" key="CommitChangelistDialog2/1920.173.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1606061512931" />
-    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1606060594240">
+    <state x="585" y="102" key="CommitChangelistDialog2/1920.173.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1609081578886" />
+    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1609081489923">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="740" y="280" key="FileChooserDialogImpl/1920.173.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1606060594240" />
+    <state x="740" y="280" key="FileChooserDialogImpl/1920.173.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1609081489923" />
     <state x="838" y="423" key="Github.ShareDialog" timestamp="1605271044589">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -205,23 +222,31 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="352" key="GridCell.Tab.1.right/1920.173.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1604944640864" />
-    <state x="794" y="448" key="NewPhpFileDialog" timestamp="1605260131629">
+    <state x="794" y="448" key="NewPhpFileDialog" timestamp="1609083736258">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="794" y="448" key="NewPhpFileDialog/1920.173.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1605260131629" />
+    <state x="794" y="448" key="NewPhpFileDialog/1920.173.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1609083736258" />
     <state x="2243" y="293" key="SettingsEditor" timestamp="1606061981082">
       <screen x="1920" y="173" width="1440" height="870" />
     </state>
     <state x="431" y="145" key="SettingsEditor/1920.173.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1605704056409" />
     <state x="2243" y="293" key="SettingsEditor/1920.173.1440.870/0.0.1920.1050@1920.173.1440.870" timestamp="1606061981082" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1606061515757">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1609081594857">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/1920.173.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1606061515757" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/1920.173.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1609081594857" />
     <state x="49" y="0" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog" timestamp="1604931384691">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="49" y="0" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog/1920.173.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1604931384691" />
+    <state x="1920" y="173" width="1456" height="957" key="dock-window-1" timestamp="1609083644590">
+      <screen x="1920" y="173" width="1440" height="870" />
+    </state>
+    <state x="1920" y="173" width="1456" height="957" key="dock-window-1/1920.173.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1609083644589" />
+    <state x="1907" y="163" width="1456" height="957" maximized="true" key="dock-window-2" timestamp="1609088724796">
+      <screen x="1920" y="173" width="1440" height="870" />
+    </state>
+    <state x="1907" y="163" width="1456" height="957" maximized="true" key="dock-window-2/1920.173.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1609088724796" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1605024232941">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

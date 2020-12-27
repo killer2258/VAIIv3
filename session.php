@@ -1,7 +1,5 @@
 <?php
 
-
-
 if(!isset($_SESSION['nick'])) {
     die();
 }

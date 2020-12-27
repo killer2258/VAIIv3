@@ -2,6 +2,7 @@
 include 'db_connect.php';
 
 ob_start();
+
 function edit_profile($db) {
 $count = 0;
     if (isset($_POST['edit'])) {

@@ -19,26 +19,20 @@ include 'server.php';
 <?php
 include 'navbar.php';
 ?>
+
 <div class="container">
     <div class="row " style="border: 3px solid black">
         <div class="col-lg-8 col-md-9" style="border-right: 3px solid black">
             <?php
-            $sql = "SELECT * FROM posts WHERE category='rpg' ORDER BY `post_id` DESC ";
+            $post_id = $_GET['id'];
+            $sql = "SELECT * FROM posts WHERE post_ID='$post_id'";
             $query = $db->query($sql);
             while($row = $query->fetch_assoc()):
                 ?>
-                <a href="<?php echo "post.php?id=" . $row['post_ID']?>">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6">
-                            <img class="description-img" src="<?php echo $row['image']?>">
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <h2><?php echo $row['title']?></h2>
-                            <p><?php echo $row['description']?></p>
-                        </div>
-                    </div>
-                </a>
 
+                <h2 align="center"><?php echo $row['title']?></h2>
+                <p align="justify"><?php echo $row['content']?></p>
+                <img class="post-img" src="<?php echo $row['image']?>">
 
             <?php endwhile; ?>
         </div>
@@ -54,5 +48,7 @@ include 'navbar.php';
         </div>
     </div>
 </div>
+
+
 </body>
 </html>
