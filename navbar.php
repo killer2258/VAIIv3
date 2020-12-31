@@ -23,7 +23,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a class="btn btn-primary register <?php
                     if ($_SESSION['login_user'] != ''){echo " hidden"; }
-                    ?>"  href="register.php#"><span class="glyphicon glyphicon-pencil"></span> Sign up</a></li>
+                    ?>"  href="register.php#"><span class="glyphicon glyphicon-pencil"></span> Registrovať</a></li>
                 <li>
                     <a type="button" class="btn btn-primary <?php
                     if ($_SESSION['login_user'] != ''){echo " hidden"; }
@@ -59,13 +59,13 @@
 
                 <li><a class="btn btn-primary <?php
                     if ($_SESSION['login_user'] != 'admin'){echo " hidden"; }
-                    ?>" href="upload_post_form.php"><span class="glyphicon glyphicon-plus"></span> Add post</a></li>
+                    ?>" href="upload_post_form.php"><span class="glyphicon glyphicon-plus"></span> Pridať príspevok</a></li>
                 <li><a class="btn btn-primary <?php
                     if ($_SESSION['login_user'] == ''){echo " hidden"; }
                     ?>" href="profile.php"><span class="glyphicon glyphicon-user"></span> Profil</a></li>
                 <li><a class="btn btn-primary <?php
                     if ($_SESSION['login_user'] == ''){echo " hidden"; }
-                    ?>" href="<?php echo "home.php?logout='1'" ?>"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
+                    ?>" href="<?php echo "home.php?logout='1'" ?>"><span class="glyphicon glyphicon-off"></span> Odhlásiť</a></li>
 
             </ul>
         </div>

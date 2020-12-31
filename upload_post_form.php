@@ -1,5 +1,5 @@
 <?php
-include 'upload_post.php';
+include 'post_server.php';
 ?>
 
 <!DOCTYPE html>
