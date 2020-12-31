@@ -98,14 +98,6 @@ if (isset($_POST['editPost'])) {
             $count++;
         }
 
-        if ($category != 'Vyber') {
-            $sql = "UPDATE posts SET category='$category' WHERE post_ID='$id'";
-            mysqli_query($db, $sql);
-        } else {
-            //echo "Zadaj kategoriu.";
-            $count++;
-        }
-
         if ($count == 0) {
             header("location: post.php?id=$id");
         } else {
@@ -113,4 +105,37 @@ if (isset($_POST['editPost'])) {
         }
 
 
+}
+
+if (isset($_POST['editImage'])) {
+    $count = 0;
+
+    $id = $_POST['id'];
+    $oldImage = $_POST['oldPath'];
+    $newImage = $_FILES['newImage']['name'];
+
+    if(empty($oldImage)) {
+        $count++;
+    }
+
+    if (file_exists($oldImage)) {
+        unlink($oldImage);
+    } else {
+        header("location: post.php?id=$id&error");
+        $count++;
+    }
+
+    if(empty($newImage)) {
+        $count++;
+    }
+
+    if ($count == 0) {
+        move_uploaded_file($_FILES['newImage']['tmp_name'], 'images/post_images/'.$_FILES['newImage']['name']);
+        $file_dest = 'images/post_images/'.$_FILES['newImage']['name'];
+
+        $sql = "UPDATE posts SET image='$file_dest' WHERE post_ID='$id'";
+        mysqli_query($db, $sql);
+
+        header("location: post.php?id=$id");
+    }
 }

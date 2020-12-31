@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4b746e27-ee65-4db1-a668-5a48a072e49a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/navbar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upload_post.php" beforeDir="false" afterPath="$PROJECT_DIR$/post_server.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upload_post_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/upload_post_form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post_server.php" beforeDir="false" afterPath="$PROJECT_DIR$/post_server.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +50,9 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Pocitac\PhpstormProjects\VAIIv3\images\post_images" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Pocitac\PhpstormProjects\VAIIv3" />
     </key>
@@ -113,6 +113,7 @@
       <workItem from="1609081476093" duration="10077000" />
       <workItem from="1609179313939" duration="467000" />
       <workItem from="1609237248663" duration="14586000" />
+      <workItem from="1609416486378" duration="2286000" />
     </task>
     <task id="LOCAL-00001" summary="Sem">
       <created>1605271093217</created>
@@ -149,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609091546100</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Úpravy v posts">
+      <created>1609416525926</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1609416525926</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,7 +167,8 @@
     <MESSAGE value="Sem" />
     <MESSAGE value="Dalsie upravy ohladom prihlasovania" />
     <MESSAGE value="Dynamicke zobrazovanie prispevkov z databazy&#10;Pridavanie prispevkov ako admin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dynamicke zobrazovanie prispevkov z databazy&#10;Pridavanie prispevkov ako admin" />
+    <MESSAGE value="Úpravy v posts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Úpravy v posts" />
   </component>
   <component name="WindowStateProjectService">
     <state x="540" y="180" key="#CLI_Interpreters" timestamp="1604931429091">
@@ -182,10 +191,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="552" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.173.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1604943155281" />
-    <state x="585" y="102" key="CommitChangelistDialog2" timestamp="1609091545465">
+    <state x="585" y="102" key="CommitChangelistDialog2" timestamp="1609416524450">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="585" y="102" key="CommitChangelistDialog2/1920.173.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1609091545465" />
+    <state x="585" y="102" key="CommitChangelistDialog2/1920.173.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1609416524450" />
     <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1609081489923">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -255,10 +264,10 @@
     </state>
     <state x="431" y="145" key="SettingsEditor/1920.173.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1605704056409" />
     <state x="2243" y="293" key="SettingsEditor/1920.173.1440.870/0.0.1920.1050@1920.173.1440.870" timestamp="1606061981082" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1609091548159">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1609416527524">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/1920.173.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1609091548159" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/1920.173.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1609416527524" />
     <state x="49" y="0" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog" timestamp="1604931384691">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

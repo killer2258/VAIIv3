@@ -1,8 +1,5 @@
 <?php
 include 'post_server.php';
-
-
-
             $post_id = $_GET['id'];
             $sql = "SELECT * FROM posts WHERE post_ID='$post_id'";
             $query = $db->query($sql);
@@ -33,10 +30,12 @@ include 'navbar.php';
 
 <div class="container">
     <div class="row " style="border: 3px solid black">
-        <div class="col-lg-8 col-md-9 <?php if($_GET['edit'] == 'edit') { echo 'hidden'; } ?>" style="border-right: 3px solid black">
+        <div class="col-lg-8 col-md-9 <?php if($_GET['edit'] == 'edit' || $_GET['edit'] == 'editImage') { echo 'hidden'; } ?>" style="border-right: 3px solid black">
                 <h2 align="center"><?php echo $title ?></h2>
                 <img class="post-img" src="<?php echo $image ?>">
+                <a class="btn btn-primary<?php if ($_SESSION['login_user'] != 'admin'){echo " hidden"; } ?>" href="post.php?id=<?php echo $post_id;?>&edit=editImage">Zmeniť obrázok</a>
                 <p style="margin-top: 10px" align="justify"><?php echo $content ?></p>
+            <a class="btn btn-primary<?php if ($_SESSION['login_user'] != 'admin'){echo " hidden"; } ?>" href="post.php?id=<?php echo $post_id;?>&edit=edit">Editovať</a>
             <form method="post" class="<?php
             if ($_SESSION['login_user'] != 'admin'){echo " hidden"; }
             ?>" >
@@ -44,7 +43,6 @@ include 'navbar.php';
                 <input type="hidden" name="img_path" value="<?php echo $image ?>">
                 <button type="submit" class="btn btn-primary" name="delPost">Odstrániť</button>
             </form>
-            <a class="btn btn-primary" href="post.php?id=<?php echo $post_id;?>&edit=edit">Editovať</a>
         </div>
         <div class="col-lg-8 col-md-9 <?php if($_GET['edit'] != 'edit') { echo 'hidden'; } ?>" style="border-right: 3px solid black">
             <form method="post">
@@ -61,16 +59,18 @@ include 'navbar.php';
                     <label>Content</label>
                     <textarea name="content" class="form-control" placeholder="Content" rows="30"><?php echo $content?></textarea>
                 </div>
-                <div class="form-group">
-                    <label>Category</label>
-                    <select id="inputState" class="form-control" name="category">
-                        <option selected value="">Vyber</option>
-                        <option value="action">Action</option>
-                        <option value="rpg">RPG</option>
-                        <option value="strategic">Strategic</option>
-                    </select>
-                </div>
                 <button type="submit" class="btn btn-primary" name="editPost" >Uložiť</button>
+            </form>
+        </div>
+        <div class="col-lg-8 col-md-9 <?php if($_GET['edit'] != 'editImage') { echo 'hidden'; } ?>" style="border-right: 3px solid black">
+            <form method="post" enctype="multipart/form-data">
+                <input type="hidden" name="id" value="<?php echo $post_id ?>">
+                <input type="hidden" name="oldPath" value="<?php echo $image ?>">
+                <div class="form-group">
+                    <label>Image:</label>
+                    <input name="newImage" accept="image/jpeg" type="file" class="form-control-file">
+                </div>
+                <button type="submit" name="editImage" class="btn btn-primary in-login-btn">Upload</button>
             </form>
         </div>
         <div class="col-lg-4 col-md-3">
