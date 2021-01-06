@@ -128,9 +128,10 @@ input[type='file'] {
 p {
     color: white;
     text-align: justify;
+    margin: 0;
 }
 
-h2, h4 {
+h2, h3, h4 {
     color: red;
 }
 .post-img {
@@ -142,4 +143,22 @@ h2, h4 {
     max-height: 206px;
     max-width: 367px;
 }
+
+textarea{
+    resize: none;
+}
+
+.col-lg-8 form {
+    margin-top: 10px;
+}
+
+table{
+    color: white;
+    background-color: #242323;
+}
+
+td, tr {
+    white-space: normal !important;
+}
+
 

@@ -3,6 +3,8 @@
 include 'db_connect.php';
 session_start();
 
+
+
 $errors = array();
 $nick = "";
 $email = "";
@@ -102,17 +104,20 @@ if (isset($_POST['login'])) {
     if (empty($nick)) {
         array_push($errors, "Nezadal si meno!");
     }
-    if (empty($pwd)) {
+    if (empty($heslo)) {
         array_push($errors, "Nezadal si heslo!");
     }
 
-    if (count($errors)) {
+    if (count($errors) == 0) {
         $heslo = md5($heslo);
         $sql = "SELECT * FROM users WHERE nick='$nick' AND password='$heslo'";
         $result = mysqli_query($db, $sql);
         $count = mysqli_num_rows($result);
 
         if ($count == 1) {
+            $query = $db->query($sql);
+            $row = $query->fetch_assoc();
+            $_SESSION['user_id'] = $row['user_id'];
             $_SESSION['login_user'] = $nick;
             header('location: home.php');
             exit();
