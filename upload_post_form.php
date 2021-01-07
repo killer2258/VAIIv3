@@ -20,7 +20,7 @@ include 'post_server.php';
 include 'navbar.php';
 ?>
 <div class="container">
-    <form method="post" enctype="multipart/form-data">
+    <form action="<?php uploadPost($db);?>" method="post" enctype="multipart/form-data">
         <?php include 'errors.php'; ?>
         <div class="form-group">
             <label>Image:</label>

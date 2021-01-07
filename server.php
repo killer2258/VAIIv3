@@ -3,8 +3,6 @@
 include 'db_connect.php';
 session_start();
 
-
-
 $errors = array();
 $nick = "";
 $email = "";

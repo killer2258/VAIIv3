@@ -33,9 +33,9 @@ include 'navbar.php';
         <div class="col-lg-8 col-md-9">
             <div class="<?php
             if(($_GET['edit'] == 'edit' || $_GET['edit'] == 'editImage')) {
-                if ($_SESSION['user_id'] != 4) {
+
                     echo 'hidden';
-                }
+
             } ?>">
                 <h2 align="center"><?php echo $title ?></h2>
                 <img class="post-img" src="<?php echo $image ?>">
@@ -43,7 +43,7 @@ include 'navbar.php';
                 <p style="margin-top: 10px" align="justify"><?php echo $content ?></p>
                 <a class="btn btn-primary<?php if ($_SESSION['login_user'] != 'admin'){echo " hidden"; } ?>" href="post.php?id=<?php echo $post_id;?>&edit=edit">Editovať</a>
 
-            <form method="post" class="<?php
+            <form action="<?php deletePost($db);?>" method="post" class="<?php
             if ($_SESSION['login_user'] != 'admin'){echo " hidden"; }
             ?>" >
                 <input type="hidden" name="post_id" value="<?php echo $post_id ?>">
@@ -52,7 +52,7 @@ include 'navbar.php';
             </form>
             </div>
 
-            <form method="post" class="<?php if(($_GET['edit'] != 'edit')) { echo 'hidden'; } ?>">
+            <form action="<?php editPost($db);?>" method="post" class="<?php if(($_GET['edit'] != 'edit')) { echo 'hidden'; } ?>">
                 <input type="hidden" name="id" value="<?php echo $post_id ?>">
                 <div class="form-group">
                     <label>Title:</label>
@@ -69,7 +69,7 @@ include 'navbar.php';
                 <button type="submit" class="btn btn-primary" name="editPost" >Uložiť</button>
             </form>
 
-            <form method="post" enctype="multipart/form-data" class="<?php if($_GET['edit'] != 'editImage' && $_SESSION['login_user'] != 'admin') { echo 'hidden'; } ?>">
+            <form action="<?php editImage($db); ?>" method="post" enctype="multipart/form-data" class="<?php if($_GET['edit'] != 'editImage') { echo 'hidden'; } ?>">
                 <input type="hidden" name="id" value="<?php echo $post_id ?>">
                 <input type="hidden" name="oldPath" value="<?php echo $image ?>">
                 <div class="form-group">
@@ -81,7 +81,7 @@ include 'navbar.php';
 
             <h3 align="center">Komentare</h3>
 
-            <form  method="post" class="<?php if($_GET['edit'] == 'edit' || $_GET['edit'] == 'editImage' || $_SESSION['user_id'] == '') { echo 'hidden'; }?>">
+            <form action="<?php set_comment($db); ?>" method="post" class="<?php if($_GET['edit'] == 'edit' || $_GET['edit'] == 'editImage' || $_SESSION['user_id'] == '') { echo 'hidden'; }?>">
                 <input type="hidden" name="post_id" value="<?php echo $post_id; ?>">
                 <input type="hidden" name="user_id" value="<?php echo $_SESSION['user_id']; ?>">
                 <input type="hidden" name="date" value="<?php echo date('Y-m-d H:i:s'); ?>">

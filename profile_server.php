@@ -46,6 +46,9 @@ function delete_profile($db) {
     if (isset($_POST['delete'])) {
         $id = $_POST['user_id'];
 
+        $sql = "DELETE FROM comments WHERE user_id='$id'";
+        mysqli_query($db, $sql);
+
         $sql = "DELETE FROM users WHERE user_id='$id'";
         mysqli_query($db, $sql);
         session_destroy();

@@ -1,6 +1,8 @@
 <?php
 include 'post_server.php';
 ob_start();
+
+function set_comment ($db) {
     if (isset($_POST['comment_submit'])) {
         $post_id = mysqli_real_escape_string($db, $_POST['post_id']);
         $user_id = mysqli_real_escape_string($db, $_POST['user_id']);
@@ -16,3 +18,4 @@ ob_start();
             exit();
         }
     }
+}
