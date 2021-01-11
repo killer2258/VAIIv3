@@ -69,7 +69,7 @@ function deletePost ($db) {
             $sql = "DELETE FROM posts WHERE post_ID='$id'";
             mysqli_query($db, $sql);
 
-            header('location: home.php');
+            header('location: home.php?category=');
             exit();
         }
     }

@@ -9,13 +9,13 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li><a href="home.php">Domov</a></li>
+                <li><a href="home.php?category=">Domov</a></li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Kategorie <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="action.php">Akcne</a></li>
-                        <li><a href="strategic.php">Strategicke</a></li>
-                        <li><a href="rpg.php">RPG</a></li>
+                        <li><a href="home.php?category=action">Akcne</a></li>
+                        <li><a href="home.php?category=strategic">Strategicke</a></li>
+                        <li><a href="home.php?category=rpg">RPG</a></li>
                     </ul>
                 </li>
                 <li><a href="about_us.html">O nas</a></li>
@@ -35,7 +35,7 @@
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <h5 class="modal-title">Prihlásenie</h5>
                                     </div>
                                     <div class="modal-body">
                                         <?php include 'errors.php'; ?>

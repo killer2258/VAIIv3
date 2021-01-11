@@ -161,4 +161,20 @@ td, tr {
     white-space: normal !important;
 }
 
+.pagination>li>a{
+    background-color: black;
+    color: red;
+    border: 1px solid red;
+    left: 20px;
+}
 
+.pagination>li>a:hover{
+    background-color: #242323;
+    color: red;
+    transition: background-color 0.5s;
+    border: 1px solid red;
+}
+
+.container>.row {
+    min-height: 500px;
+}

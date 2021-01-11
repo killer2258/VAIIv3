@@ -7,6 +7,11 @@ $errors = array();
 $nick = "";
 $email = "";
 
+if (empty($_SESSION['user_id'])) {
+    $_SESSION['user_id'] = '';
+    $_SESSION['login_user'] = '';
+}
+
 function check_filters($expression, $filters) {
     foreach ($filters as $value) {
         if (!preg_match($value, $expression)) {
@@ -90,7 +95,7 @@ if (isset($_POST['register'])) {
         $pwd = md5($pwd);
         $query = "INSERT INTO users (nick, email, password) VALUES ('$nick', '$email', '$pwd')";
         mysqli_query($db, $query);
-        header('location: home.php');
+        header('location: home.php?category=');
         exit();
     }
 }
@@ -117,7 +122,7 @@ if (isset($_POST['login'])) {
             $row = $query->fetch_assoc();
             $_SESSION['user_id'] = $row['user_id'];
             $_SESSION['login_user'] = $nick;
-            header('location: home.php');
+            header('location: home.php?category=');
             exit();
         } else {
             array_push($errors, "Nespravne meno alebo heslo");
@@ -128,5 +133,5 @@ if (isset($_POST['login'])) {
 if (isset($_GET['logout'])) {
     session_destroy();
     unset($_SESSION['nick']);
-    header("location: home.php");
+    header("location: home.php?category=");
 }

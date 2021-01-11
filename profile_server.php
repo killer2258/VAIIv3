@@ -54,7 +54,7 @@ function delete_profile($db) {
         session_destroy();
         unset($_SESSION['nick']);
 
-        header("location: home.php");
+        header("location: home.php?category=");
         exit();
     }
 }
