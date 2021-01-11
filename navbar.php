@@ -25,13 +25,13 @@
                     if ($_SESSION['login_user'] != ''){echo " hidden"; }
                     ?>"  href="register.php#"><span class="glyphicon glyphicon-pencil"></span> Registrovať</a></li>
                 <li>
-                    <a type="button" class="btn btn-primary <?php
+                    <a class="btn btn-primary <?php
                     if ($_SESSION['login_user'] != ''){echo " hidden"; }
                     ?>" data-toggle="modal" data-target="#exampleModal"><span class="glyphicon glyphicon-log-in"></span>
                         Prihlasit
                     </a>
                     <form method="post">
-                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -40,8 +40,8 @@
                                     <div class="modal-body">
                                         <?php include 'errors.php'; ?>
                                         <div class="form-group mx-sm-3 mb-2">
-                                            <label for="inputPassword2" class="sr-only">E-mail</label>
-                                            <input type="text" name="nick" class="form-control" id="inputPassword2" placeholder="Nick...">
+                                            <label for="inputPassword" class="sr-only">E-mail</label>
+                                            <input type="text" name="nick" class="form-control" id="inputPassword" placeholder="Nick...">
                                         </div>
                                         <div class="form-group mx-sm-3 mb-2">
                                             <label for="inputPassword2" class="sr-only">Heslo</label>
@@ -62,7 +62,7 @@
                     ?>" href="upload_post_form.php"><span class="glyphicon glyphicon-plus"></span> Pridať príspevok</a></li>
                 <li><a class="btn btn-primary <?php
                     if ($_SESSION['login_user'] == ''){echo " hidden"; }
-                    ?>" href="profile.php"><span class="glyphicon glyphicon-user"></span> Profil</a></li>
+                    ?>" href="profile.php?edit="><span class="glyphicon glyphicon-user"></span> Profil</a></li>
                 <li><a class="btn btn-primary <?php
                     if ($_SESSION['login_user'] == ''){echo " hidden"; }
                     ?>" href="<?php echo "home.php?logout='1'" ?>"><span class="glyphicon glyphicon-off"></span> Odhlásiť</a></li>

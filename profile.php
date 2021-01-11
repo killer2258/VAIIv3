@@ -26,7 +26,7 @@ $user_query = $user_query->fetch_assoc();
     ?>
     <div class="container">
         <div  class="row">
-            <h2 align="center">Profilové údaje</h2>
+            <h2>Profilové údaje</h2>
             <div class="col-lg-12 col-md-12 <?php if ($_GET['state'] == 'edit'){echo 'hidden';}?>" style="min-height: 40vw;">
                 <div class="row">
                     <div class="col-md-4">
@@ -51,7 +51,7 @@ $user_query = $user_query->fetch_assoc();
                         <p><?php echo $row['email'] ?></p>
                     </div>
                 </div>
-                <?php echo '<a class="btn btn-primary" type="submit" href="profile.php?chyba=0&state=edit&id='.$user_query['user_id'].'">Editovať profil</a>' ?>
+                <?php echo '<a class="btn btn-primary" href="profile.php?chyba=0&state=edit&id='.$user_query['user_id'].'">Editovať profil</a>' ?>
                 <form method="post" action="<?php delete_profile($db); ?>">
                     <input type="text" class="hidden" name="user_id" value="<?php echo $user_query['user_id'] ?>">
                     <button type="submit" class="btn btn-primary" name="delete" style="margin-top: 10px;">Odstranit</button>
@@ -68,12 +68,12 @@ $user_query = $user_query->fetch_assoc();
                     }
                  ?>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Nový nick</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Novy nick..." name="nick">
+                    <label for="newNick">Nový nick</label>
+                    <input type="text" class="form-control" id="newNick" placeholder="Novy nick..." name="nick">
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">Nový e-mail</label>
-                    <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Novy email..." name="email">
+                    <label for="newEmail">Nový e-mail</label>
+                    <input type="email" class="form-control" id="newEmail" placeholder="Novy email..." name="email">
                 </div>
                 <button type="submit" class="btn btn-primary" name="edit" >Uložiť</button>
             </form>

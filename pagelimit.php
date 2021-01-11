@@ -24,7 +24,7 @@ while($row = $query->fetch_assoc()):
     <a href="<?php echo "post.php?id=" . $row['post_ID'] . "&edit="?>">
         <div class="row">
             <div class="col-lg-6 col-md-6">
-                <img class="description-img" src="<?php echo $row['image']?>">
+                <img alt="image" class="description-img" src="<?php echo $row['image']?>">
             </div>
             <div class="col-lg-6 col-md-6">
                 <h2><?php echo $row['title']?></h2>

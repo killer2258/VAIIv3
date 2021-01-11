@@ -2,7 +2,7 @@
     include 'server.php';
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -22,20 +22,20 @@ include 'navbar.php';
     <form method="post">
         <?php include 'errors.php'; ?>
         <div class="form-group">
-            <label for="exampleInputEmail1">Nick</label>
-            <input name="nick" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nick">
+            <label for="nick">Nick</label>
+            <input name="nick" type="text" class="form-control" id="nick" placeholder="Nick">
         </div>
         <div class="form-group">
-            <label for="exampleInputPassword1">E-mail</label>
-            <input name="email" type="email" class="form-control" id="exampleInputPassword1" placeholder="Email">
+            <label for="email">E-mail</label>
+            <input name="email" type="email" class="form-control" id="email" placeholder="Email">
         </div>
         <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <label for="password1">Password</label>
+            <input name="password" type="password" class="form-control" id="password1" placeholder="Password">
         </div>
         <div class="form-group">
-            <label for="exampleInputPassword1">Re-Password</label>
-            <input name="re-password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Re-Password">
+            <label for="password2">Re-Password</label>
+            <input name="re-password" type="password" class="form-control" id="password2" placeholder="Re-Password">
         </div>
         <button type="submit" name="register" class="btn btn-primary in-login-btn">Submit</button>
     </form>
