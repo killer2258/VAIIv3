@@ -27,12 +27,12 @@ $user_query = $user_query->fetch_assoc();
     <div class="container">
         <div  class="row">
             <h2>Profilové údaje</h2>
-            <div class="col-lg-12 col-md-12 <?php if ($_GET['state'] == 'edit'){echo 'hidden';}?>" style="min-height: 40vw;">
+            <div class="col-lg-12 col-md-12 <?php if ($_GET['state'] == 'edit'){echo 'hidden';}?>" style="min-height: 350px;">
                 <div class="row">
-                    <div class="col-md-4">
-                        <p>Nick:</p>
+                    <div class="col-md-6 profile">
+                        <b>Nick:</b>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 profile">
                         <?php
                             $profile = "SELECT nick, email FROM users WHERE nick = '$logged'";
                             $res = $db->query($profile);
@@ -44,19 +44,24 @@ $user_query = $user_query->fetch_assoc();
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4">
-                        <p>E-mail:</p>
+                    <div class="col-md-6 profile">
+                        <b>E-mail:</b>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 profile">
                         <p><?php echo $row['email'] ?></p>
                     </div>
                 </div>
+
+
+
+            </div>
+            <div class="profile-buttons <?php if ($_GET['state'] == "edit"  ){ echo "hidden";} ?>">
+
                 <?php echo '<a class="btn btn-primary" href="profile.php?chyba=0&state=edit&id='.$user_query['user_id'].'">Editovať profil</a>' ?>
                 <form method="post" action="<?php delete_profile($db); ?>">
                     <input type="text" class="hidden" name="user_id" value="<?php echo $user_query['user_id'] ?>">
                     <button type="submit" class="btn btn-primary" name="delete" style="margin-top: 10px;">Odstranit</button>
                 </form>
-
             </div>
             <form style="width: 80%; min-height: 40vw;  margin: auto" class="<?php if ($_GET['state'] != 'edit'){echo 'hidden';}?>" action="<?php edit_profile($db); ?>" method="post">
                 <?php if($_GET['chyba'] == 1) {

@@ -19,7 +19,7 @@ include 'navbar.php';
 $_SESSION['category'] = $_GET['category'];
 $category = $_SESSION['category'];
 
-$limit = 6;
+$limit = 3;
 if (empty($category)) {
     $sql = "SELECT COUNT(post_ID) FROM posts";
 } else {

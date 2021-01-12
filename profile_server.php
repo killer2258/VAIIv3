@@ -36,7 +36,7 @@ $count = 0;
         }
 
         if ($count == 0) {
-            header("Location: profile.php");
+            header("Location: profile.php?state=");
         }
     }
 }
