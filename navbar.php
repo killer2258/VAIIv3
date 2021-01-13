@@ -32,7 +32,14 @@ include 'adminTool.php';
                         <li><a href="home.php?category=rpg">RPG</a></li>
                     </ul>
                 </li>
-                <li><a href="about_us.html">O nas</a></li>
+                <li><a href="aboutUs.php">O nas</a></li>
+                <li class="adminTool dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Tools <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="users.php">Pouzivatelia</a></li>
+                        <li><a href="posts.php">Články</a></li>
+                    </ul>
+                </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a class="btn btn-primary register <?php
@@ -63,6 +70,7 @@ include 'adminTool.php';
                                         </div>
                                     </div>
                                     <div class="modal-footer">
+                                        <a href="forgot_pass.php" class="btn btn-primary mb-2">Zabudnute heslo</a>
                                         <button type="submit" name="login" class="btn btn-primary mb-2">Prihlasit</button>
                                     </div>
                                 </div>

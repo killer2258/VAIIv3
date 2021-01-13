@@ -210,3 +210,15 @@ td, tr {
 td > form {
     margin: 0 !important;
 }
+
+a {
+    text-decoration: none !important;
+}
+
+.col-lg-6, .col-md-6 {
+    text-align: center;
+}
+
+.col-lg-6>p, .col-md-6>p {
+    text-align: center;
+}

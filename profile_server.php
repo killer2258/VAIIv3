@@ -45,6 +45,7 @@ function delete_profile($db) {
 
     if (isset($_POST['delete'])) {
         $id = $_POST['user_id'];
+        $stranka = $_POST['stranka'];
 
         $sql = "DELETE FROM comments WHERE user_id='$id'";
         mysqli_query($db, $sql);
@@ -53,6 +54,11 @@ function delete_profile($db) {
         mysqli_query($db, $sql);
         session_destroy();
         unset($_SESSION['nick']);
+
+        if ($stranka == "adminStranka") {
+            header("location: users.php");
+            exit();
+        }
 
         header("location: home.php?category=");
         exit();

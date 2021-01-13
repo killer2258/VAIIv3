@@ -51,12 +51,10 @@ $user_query = $user_query->fetch_assoc();
                         <p><?php echo $row['email'] ?></p>
                     </div>
                 </div>
-
-
-
             </div>
             <div class="profile-buttons <?php if ($_GET['state'] == "edit"  ){ echo "hidden";} ?>">
 
+                <a href="forgot_pass.php" class="btn btn-primary">Zmena Hesla</a>
                 <?php echo '<a class="btn btn-primary" href="profile.php?chyba=0&state=edit&id='.$user_query['user_id'].'">Editovať profil</a>' ?>
                 <form method="post" action="<?php delete_profile($db); ?>">
                     <input type="text" class="hidden" name="user_id" value="<?php echo $user_query['user_id'] ?>">

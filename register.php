@@ -1,10 +1,8 @@
 <?php
     include 'server.php';
+    include 'navbar.php';
 ?>
-
-<?php
-include 'navbar.php';
-?>
+<title>Registracia</title>
 <div class="container">
     <form method="post">
         <?php include 'errors.php'; ?>

@@ -12,9 +12,11 @@ while ($row = $query->fetch_assoc()) {
 }
 
 $hidden = "";
+
+$stranka = "postStranka";
 ?>
 
-<title>Domov</title>
+<title><?php echo $title;?></title>
 <?php
 include 'navbar.php';
 ?>
@@ -37,6 +39,7 @@ include 'navbar.php';
                 <form action="<?php deletePost($db); ?>" method="post" class="adminTool">
                     <input type="hidden" name="post_id" value="<?php echo $post_id ?>">
                     <input type="hidden" name="img_path" value="<?php echo $image ?>">
+                    <input type="hidden" name="stranka" value="<?php echo $stranka ?>">
                     <button type="submit" class="btn btn-primary" name="delPost">Odstrániť</button>
                 </form>
 

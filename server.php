@@ -124,6 +124,7 @@ if (isset($_POST['login'])) {
             $_SESSION['user_id'] = $row['user_id'];
             $_SESSION['login_user'] = $nick;
             $_SESSION['role'] = $row['role'];
+            $_SESSION['email'] = $row['email'];
             header('location: home.php?category=');
             exit();
         } else {
@@ -136,4 +137,58 @@ if (isset($_GET['logout'])) {
     session_destroy();
     unset($_SESSION['nick']);
     header("location: home.php?category=");
+}
+
+if (isset($_POST['resetPass'])) {
+    $email = mysqli_real_escape_string($db, $_POST['email']);
+    $pwd = mysqli_real_escape_string($db, $_POST['password']);
+    $repwd = mysqli_real_escape_string($db, $_POST['re-password']);
+
+    if(empty($nick)) {
+        array_push($errors, "Nezadali ste nick!");
+    }
+    else {
+        $nick = check_in($_POST['nick']);
+        if (strlen($nick) < 5) {
+            array_push($errors, "Zadany nick je prilis kratky!");
+        }
+    }
+
+    if (empty($pwd)) {
+        array_push($errors, "Nezadali ste heslo!");
+    } else {
+        $pwd = htmlspecialchars($_POST['password']);
+        if (strlen($pwd) < 8) {
+            array_push($errors, "Heslo musí obsahovať aspoň 8 znakov!");
+        }
+    }
+
+    if (empty($repwd)) {
+        array_push($errors, "Potvrďte heslo!");
+    } else {
+        $repwd = htmlspecialchars($_POST['re-password']);
+    }
+    if ($pwd != $repwd) {
+        array_push($errors, "Heslá sa nezhodujú!");
+    }
+
+    if (count($errors)) {
+        $check_query = "SELECT * FROM users WHERE email='$email'";
+        $res = mysqli_query($db, $check_query);
+        $count = mysqli_num_rows($res);
+
+        if ($count == 1) {
+            $pwd = md5($pwd);
+
+            $query = $db->query($check_query);
+            $row = $query->fetch_assoc();
+            $id = $row['user_id'];
+
+            $query = "UPDATE users SET password='$pwd' WHERE user_id='$id'";
+            mysqli_query($db, $query);
+
+            header("location: home.php?category=");
+            exit();
+        }
+    }
 }

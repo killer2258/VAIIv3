@@ -1,9 +1,7 @@
 <?php
 include 'server.php';
-
-
-
 include 'navbar.php';
+
 $_SESSION['category'] = $_GET['category'];
 $category = $_SESSION['category'];
 
@@ -19,14 +17,13 @@ $row = mysqli_fetch_row($result);
 $posts = $row[0];
 $pages = ceil($posts / $limit);
 ?>
+<title>Domov</title>
 <div class="container">
     <div class="row " style="border: 3px solid black">
         <div class="col-lg-8 col-md-9" style="border-right: 3px solid black">
             <div id="target">
 
             </div>
-
-
             <ul class="pagination">
                 <?php
                 if (!empty($pages)) {

@@ -54,6 +54,7 @@ function deletePost ($db) {
 
         $id = $_POST['post_id'];
         $image = $_POST['img_path'];
+        $stranka = $_POST['stranka'];
 
         if (file_exists($image)) {
             unlink($image);
@@ -69,8 +70,13 @@ function deletePost ($db) {
             $sql = "DELETE FROM posts WHERE post_ID='$id'";
             mysqli_query($db, $sql);
 
-            header('location: home.php?category=');
-            exit();
+            if ($stranka == "adminStranka") {
+                header('location: posts.php');
+                exit();
+            } else {
+                header('location: home.php?category=');
+                exit();
+            }
         }
     }
 }
@@ -89,7 +95,6 @@ function editPost($db) {
             $sql = "UPDATE posts SET title='$title' WHERE post_ID='$id'";
             mysqli_query($db, $sql);
         } else {
-            //echo "Zadaj nazov.";
             $count++;
         }
 
@@ -97,7 +102,6 @@ function editPost($db) {
             $sql = "UPDATE posts SET content='$content' WHERE post_ID='$id'";
             mysqli_query($db, $sql);
         } else {
-            //echo "Zadaj telo.";
             $count++;
         }
 
@@ -105,7 +109,6 @@ function editPost($db) {
             $sql = "UPDATE posts SET description='$description' WHERE post_ID='$id'";
             mysqli_query($db, $sql);
         } else {
-            //echo "Zadaj popis.";
             $count++;
         }
 
