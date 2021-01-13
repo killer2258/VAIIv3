@@ -10,6 +10,7 @@ $email = "";
 if (empty($_SESSION['user_id'])) {
     $_SESSION['user_id'] = '';
     $_SESSION['login_user'] = '';
+    $_SESSION['role'] = '';
 }
 
 function check_filters($expression, $filters) {
@@ -93,7 +94,7 @@ if (isset($_POST['register'])) {
 
     if (count($errors) == 0) {
         $pwd = md5($pwd);
-        $query = "INSERT INTO users (nick, email, password) VALUES ('$nick', '$email', '$pwd')";
+        $query = "INSERT INTO users (nick, email, password, role) VALUES ('$nick', '$email', '$pwd', 'pouzivatel')";
         mysqli_query($db, $query);
         header('location: home.php?category=');
         exit();
@@ -122,6 +123,7 @@ if (isset($_POST['login'])) {
             $row = $query->fetch_assoc();
             $_SESSION['user_id'] = $row['user_id'];
             $_SESSION['login_user'] = $nick;
+            $_SESSION['role'] = $row['role'];
             header('location: home.php?category=');
             exit();
         } else {

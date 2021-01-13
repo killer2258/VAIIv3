@@ -1,3 +1,17 @@
+<?php
+include 'adminTool.php';
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body onload="protect()">
 <nav class="navbar">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -30,7 +44,7 @@
                     ?>" data-toggle="modal" data-target="#exampleModal"><span class="glyphicon glyphicon-log-in"></span>
                         Prihlasit
                     </a>
-                    <form method="post">
+                    <form method="post" style="margin: 0">
                         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
@@ -57,9 +71,7 @@
                     </form>
                 </li>
 
-                <li><a class="btn btn-primary <?php
-                    if ($_SESSION['login_user'] != 'admin'){echo " hidden"; }
-                    ?>" href="upload_post_form.php"><span class="glyphicon glyphicon-plus"></span> Pridať príspevok</a></li>
+                <li class="adminTool"><a class="btn btn-primary" href="upload_post_form.php"><span class="glyphicon glyphicon-plus"></span> Pridať príspevok</a></li>
                 <li><a class="btn btn-primary <?php
                     if ($_SESSION['login_user'] == ''){echo " hidden"; }
                     ?>" href="profile.php?state="><span class="glyphicon glyphicon-user"></span> Profil</a></li>
