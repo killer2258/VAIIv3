@@ -1,8 +1,11 @@
+<!DOCTYPE html>
 <?php
     include 'server.php';
-    include 'navbar.php';
 ?>
 <title>Registracia</title>
+<?php
+    include 'navbar.php';
+?>
 <div class="container">
     <form method="post">
         <?php include 'errors.php'; ?>

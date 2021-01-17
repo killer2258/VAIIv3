@@ -1,6 +1,6 @@
+<!DOCTYPE html>
 <?php
 include 'post_server.php';
-include 'navbar.php';
 
 $sql = "SELECT * FROM posts ORDER BY post_ID ASC";
 $query = $db->query($sql);
@@ -8,6 +8,9 @@ $query = $db->query($sql);
 $stranka = "adminStranka";
 ?>
 <title>Clanky</title>
+<?php
+    include 'navbar.php';
+?>
 <div class="container">
     <div class="row " style="border: 3px solid black">
         <table class="table">

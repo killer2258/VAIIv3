@@ -1,6 +1,6 @@
+<!DOCTYPE html>
 <?php
 include 'profile_server.php';
-include 'navbar.php';
 
 $sql = "SELECT * FROM users ORDER BY user_id ASC";
 $query = $db->query($sql);
@@ -8,6 +8,9 @@ $query = $db->query($sql);
 $stranka = "adminStranka";
 ?>
 <title>Pouzivatelia</title>
+<?php
+include 'navbar.php';
+?>
 <div class="container">
     <div class="row " style="border: 3px solid black">
         <table class="table">

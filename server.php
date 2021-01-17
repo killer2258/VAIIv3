@@ -13,7 +13,8 @@ if (empty($_SESSION['user_id'])) {
     $_SESSION['role'] = '';
 }
 
-function check_filters($expression, $filters) {
+function check_filters($expression, $filters)
+{
     foreach ($filters as $value) {
         if (!preg_match($value, $expression)) {
             return 0;
@@ -22,7 +23,8 @@ function check_filters($expression, $filters) {
     return 1;
 }
 
-function check_in($data) {
+function check_in($data)
+{
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
@@ -35,10 +37,9 @@ if (isset($_POST['register'])) {
     $pwd = mysqli_real_escape_string($db, $_POST['password']);
     $repwd = mysqli_real_escape_string($db, $_POST['re-password']);
 
-    if(empty($nick)) {
+    if (empty($nick)) {
         array_push($errors, "Nezadali ste nick!");
-    }
-    else {
+    } else {
         $nick = check_in($_POST['nick']);
         if (strlen($nick) < 5) {
             array_push($errors, "Zadany nick je prilis kratky!");
@@ -93,7 +94,7 @@ if (isset($_POST['register'])) {
     }
 
     if (count($errors) == 0) {
-        $pwd = md5($pwd);
+        $pwd = password_hash($pwd, PASSWORD_DEFAULT);
         $query = "INSERT INTO users (nick, email, password, role) VALUES ('$nick', '$email', '$pwd', 'pouzivatel')";
         mysqli_query($db, $query);
         header('location: home.php?category=');
@@ -111,31 +112,39 @@ if (isset($_POST['login'])) {
     if (empty($heslo)) {
         array_push($errors, "Nezadal si heslo!");
     }
-
     if (count($errors) == 0) {
-        $heslo = md5($heslo);
-        $sql = "SELECT * FROM users WHERE nick='$nick' AND password='$heslo'";
-        $result = mysqli_query($db, $sql);
-        $count = mysqli_num_rows($result);
+        $query = "SELECT * FROM users WHERE nick = '$nick'";
+        $result = mysqli_query($db, $query);
 
-        if ($count == 1) {
-            $query = $db->query($sql);
-            $row = $query->fetch_assoc();
-            $_SESSION['user_id'] = $row['user_id'];
-            $_SESSION['login_user'] = $nick;
-            $_SESSION['role'] = $row['role'];
-            $_SESSION['email'] = $row['email'];
-            header('location: home.php?category=');
-            exit();
-        } else {
-            array_push($errors, "Nespravne meno alebo heslo");
+        if (mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_array($result)) {
+
+                if (password_verify($heslo, $row['password'])) {
+                    $_SESSION['user_id'] = $row['user_id'];
+                    $_SESSION['login_user'] = $nick;
+                    $_SESSION['role'] = $row['role'];
+                    $_SESSION['email'] = $row['email'];
+                    header('location: home.php?category=');
+                    exit();
+
+                } else {
+                    array_push($errors, "Nespravne heslo");
+                }
+
+
+            }
         }
     }
+
+
 }
 
 if (isset($_GET['logout'])) {
     session_destroy();
-    unset($_SESSION['nick']);
+    unset ($_SESSION['user_id']);
+    unset ($_SESSION['login_user']);
+    unset ($_SESSION['role']);
+    unset ($_SESSION['email']);
     header("location: home.php?category=");
 }
 
@@ -144,10 +153,9 @@ if (isset($_POST['resetPass'])) {
     $pwd = mysqli_real_escape_string($db, $_POST['password']);
     $repwd = mysqli_real_escape_string($db, $_POST['re-password']);
 
-    if(empty($nick)) {
+    if (empty($nick)) {
         array_push($errors, "Nezadali ste nick!");
-    }
-    else {
+    } else {
         $nick = check_in($_POST['nick']);
         if (strlen($nick) < 5) {
             array_push($errors, "Zadany nick je prilis kratky!");
@@ -178,7 +186,7 @@ if (isset($_POST['resetPass'])) {
         $count = mysqli_num_rows($res);
 
         if ($count == 1) {
-            $pwd = md5($pwd);
+            $pwd = password_hash($pwd, PASSWORD_DEFAULT);
 
             $query = $db->query($check_query);
             $row = $query->fetch_assoc();

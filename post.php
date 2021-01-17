@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 include 'comment_server.php';
 $post_id = $_GET['id'];
@@ -13,27 +14,32 @@ while ($row = $query->fetch_assoc()) {
 
 $hidden = "";
 
+if ($_SESSION['user_id'] == '') {
+    $hidden = "hidden";
+}
+
 $stranka = "postStranka";
 ?>
-
 <title><?php echo $title;?></title>
 <?php
 include 'navbar.php';
 ?>
 <div class="container">
     <div class="row " style="border: 3px solid black">
-        <div class="col-lg-8 col-md-9">
+        <div class="col-lg-12 col-md-12 post-content">
             <div class="<?php
             if (($_GET['edit'] == 'edit' || $_GET['edit'] == 'editImage')) {
 
                 echo 'hidden';
 
             } ?>">
-                <h2 align="center"><?php echo $title ?></h2>
-                <img class="post-img" src="<?php echo $image ?>">
-                <a class="btn btn-primary adminTool" href="post.php?id=<?php echo $post_id; ?>&edit=editImage">Zmeniť
+                <h2><?php echo $title ?></h2>
+                <img alt="<?php echo $title ?>" class="post-img" src="<?php echo $image ?>">
+                <p>
+                <a class="img-button btn btn-primary adminTool" href="post.php?id=<?php echo $post_id; ?>&edit=editImage">Zmeniť
                     obrázok</a>
-                <p style="margin-top: 10px" align="justify"><?php echo $content ?></p>
+                </p>
+                <p style="margin-top: 10px"><?php echo $content ?></p>
                 <a class="btn btn-primary adminTool" href="post.php?id=<?php echo $post_id; ?>&edit=edit">Editovať</a>
 
                 <form action="<?php deletePost($db); ?>" method="post" class="adminTool">
@@ -43,7 +49,7 @@ include 'navbar.php';
                     <button type="submit" class="btn btn-primary" name="delPost">Odstrániť</button>
                 </form>
 
-                <h3 align="center">Komentare</h3>
+                <h3>Komentare</h3>
 
                 <div class="<?php if ($_SESSION['user_id'] != '') {
                     echo 'hidden';
@@ -51,7 +57,7 @@ include 'navbar.php';
                     <p>Ak chcete pridávať komentáre, musíte sa prihlásiť</p>
                 </div>
 
-                <form action="<?php set_comment($db); ?>" method="post" id="comment_form">
+                <form action="<?php set_comment($db); ?>" method="post" id="comment_form" class="<?php echo $hidden ?>">
                     <input type="hidden" name="post_id" value="<?php echo $post_id; ?>" id="post_id">
                     <input type="hidden" name="user_id" value="<?php echo $_SESSION['user_id']; ?>" id="user_id">
                     <input type="hidden" name="date" value="<?php echo date('Y-m-d H:i:s'); ?>" id="date">
@@ -80,7 +86,7 @@ include 'navbar.php';
 
                             if ($_SESSION['user_id'] !== $user_id) {
                                 $hidden = "hidden";
-                                if ($_SESSION['login_user'] == "admin") {
+                                if ($_SESSION['role'] == "admin") {
                                     $hidden = "display";
                                 }
                             }
@@ -97,7 +103,6 @@ include 'navbar.php';
                                         <button type="submit" name="delete_comment" class="<?php echo $hidden ?>">
                                             Odstranit
                                         </button>
-                                        <button class="<?php echo $hidden ?>">Editovat</button>
                                         <i><?php echo $row['date']; ?></i>
                                     </form>
 
@@ -156,25 +161,9 @@ include 'navbar.php';
                 </div>
                 <button type="submit" name="editImage" class="btn btn-primary in-login-btn">Upload</button>
             </form>
-
-
-        </div>
-
-        <div class="col-lg-4 col-md-3">
-            <div class="row" style="padding: 0 20px;  min-height: 500px; max-height: 800px">
-                <h2 style="text-align: center">Nadpis</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mattis ornare lorem, eget convallis
-                    arcu rhoncus non. Aene</p>
-            </div>
-            <div class="row" style="padding: 0 20px;  min-height: 500px; max-height: 800px">
-                <h2 style="text-align: center">Nadpis</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mattis ornare lorem, eget convallis
-                    arcu rhoncus non. Aene</p>
-            </div>
         </div>
     </div>
 </div>
-<?php echo $hidden ?>
 <script>
     $(document).ready(function () {
         $(document).on('click', '#btn_more', function () {
@@ -188,7 +177,7 @@ include 'navbar.php';
                 data: {last_comment_id: last_comment_id, post_id: post_id, hidden: hidden},
                 dataType: "text",
                 success: function (data) {
-                    if (data != '') {
+                    if (data !== '') {
                         $('#remove_row').remove();
                         $('#load_data_table').append(data);
                     } else {

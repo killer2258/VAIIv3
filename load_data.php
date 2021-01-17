@@ -29,7 +29,6 @@ if ($result != false) {
                         </td> 
                         <td style="text-align: right; color: #727272">
                             <button class="' . $hidden . '">Odstranit</button>
-                            <button class="' . $hidden . '">Editovat</button>
                             <i>' . $row['date'] . '</i>
                         </td>
                    </tr>

@@ -1,9 +1,11 @@
+<!DOCTYPE html>
 <?php
 include 'server.php';
+?>
+<title>Zmena_Hesla</title>
+<?php
 include 'navbar.php';
 ?>
-<title>Zmena Hesla</title>
-
 <div class="container">
     <form method="post" action="server.php">
         <?php include 'errors.php'; ?>

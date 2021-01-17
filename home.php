@@ -1,6 +1,7 @@
+<!DOCTYPE html>
 <?php
 include 'server.php';
-include 'navbar.php';
+
 
 $_SESSION['category'] = $_GET['category'];
 $category = $_SESSION['category'];
@@ -18,9 +19,12 @@ $posts = $row[0];
 $pages = ceil($posts / $limit);
 ?>
 <title>Domov</title>
+<?php
+    include 'navbar.php';
+?>
 <div class="container">
     <div class="row " style="border: 3px solid black">
-        <div class="col-lg-8 col-md-9" style="border-right: 3px solid black">
+        <div class="col-lg-12 col-md-12" style="border-right: 3px solid black">
             <div id="target">
 
             </div>
@@ -63,19 +67,6 @@ $pages = ceil($posts / $limit);
                 });
             </script>
         </div>
-        <div class="col-lg-4 col-md-3">
-            <div class="row" style="padding: 0 20px;">
-                <h2 style="text-align: center">Nadpis</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mattis ornare lorem, eget convallis
-                    arcu rhoncus non. Aene</p>
-            </div>
-            <div class="row" style="padding: 0 20px;">
-                <h2 style="text-align: center">Nadpis</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mattis ornare lorem, eget convallis
-                    arcu rhoncus non. Aene</p>
-            </div>
-        </div>
-
     </div>
 </div>
 </body>
