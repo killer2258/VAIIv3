@@ -13,6 +13,11 @@ if (empty($_SESSION['user_id'])) {
     $_SESSION['role'] = '';
 }
 
+/**
+ * @param $expression
+ * @param $filters
+ * @return int
+ */
 function check_filters($expression, $filters)
 {
     foreach ($filters as $value) {
@@ -23,6 +28,10 @@ function check_filters($expression, $filters)
     return 1;
 }
 
+/**
+ * @param $data
+ * @return string
+ */
 function check_in($data)
 {
     $data = trim($data);

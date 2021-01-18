@@ -2,6 +2,9 @@
 include 'post_server.php';
 ob_start();
 
+/**
+ * @param $db
+ */
 function set_comment($db)
 {
     if (isset($_POST['comment_submit'])) {
@@ -21,6 +24,9 @@ function set_comment($db)
     }
 }
 
+/**
+ * @param $db
+ */
 function delete_comment($db)
 {
     if (isset($_POST['delete_comment'])) {

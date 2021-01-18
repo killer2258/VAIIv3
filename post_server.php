@@ -3,6 +3,9 @@
 include 'server.php';
 ob_start();
 
+/**
+ * @param $db
+ */
 function uploadPost($db) {
     if (isset($_POST['upload'])) {
         $title = mysqli_real_escape_string($db, $_POST['title']);
@@ -47,6 +50,9 @@ function uploadPost($db) {
     }
 }
 
+/**
+ * @param $db
+ */
 function deletePost ($db) {
     $count = 0;
 
@@ -81,6 +87,9 @@ function deletePost ($db) {
     }
 }
 
+/**
+ * @param $db
+ */
 function editPost($db) {
     if (isset($_POST['editPost'])) {
         $count = 0;
@@ -121,6 +130,9 @@ function editPost($db) {
 }
 
 
+/**
+ * @param $db
+ */
 function editImage($db) {
     if (isset($_POST['editImage'])) {
         $count = 0;

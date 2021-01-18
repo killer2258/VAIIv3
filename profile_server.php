@@ -3,6 +3,9 @@ include 'db_connect.php';
 
 ob_start();
 
+/**
+ * @param $db
+ */
 function edit_profile($db) {
 $count = 0;
     if (isset($_POST['edit'])) {
@@ -41,6 +44,9 @@ $count = 0;
     }
 }
 
+/**
+ * @param $db
+ */
 function delete_profile($db) {
 
     if (isset($_POST['delete'])) {
