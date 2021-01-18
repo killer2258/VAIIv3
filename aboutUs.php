@@ -28,15 +28,15 @@ include 'navbar.php';
     </div>
     <div class="row">
         <h2>Kontakt</h2>
-        <div class="col-lg-4 col-md-4">
-            <img alt="FB" src="images/facebook-logo-1.png">
-        </div>
-        <div class="col-lg-4 col-md-4">
-            <img alt="Twitter" src="images/twitter-213-569318.png">
-        </div>
-        <div class="col-lg-4 col-md-4">
-            <img alt="Pinterest" src="images/pinterest-flat.png">
-        </div>
+            <div class="col-lg-4 col-md-4">
+                <img class="center" alt="FB" src="images/facebook-logo-1.png">
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <img class="center" alt="Twitter" src="images/twitter-213-569318.png">
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <img class="center" alt="Pinterest" src="images/pinterest-flat.png">
+            </div>
     </div>
 </div>
 </body>

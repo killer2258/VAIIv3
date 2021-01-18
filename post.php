@@ -109,7 +109,7 @@ include 'navbar.php';
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="2">
+                                <td class="leftAlign" colspan="2">
                                     <?php echo $row['content']; ?>
                                 </td>
                             </tr>
@@ -117,7 +117,7 @@ include 'navbar.php';
                         endwhile;
                         ?>
                         <tr id="remove_row">
-                            <td>
+                            <td class="leftAlign">
                                 <button name="btn_more" data-vid="<?php echo $comment_id; ?>" id="btn_more"
                                         class="btn btn-primary">Viac
                                 </button>

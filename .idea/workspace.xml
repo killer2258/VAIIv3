@@ -7,18 +7,10 @@
     <list default="true" id="4b746e27-ee65-4db1-a668-5a48a072e49a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aboutUs.php" beforeDir="false" afterPath="$PROJECT_DIR$/aboutUs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forgot_pass.php" beforeDir="false" afterPath="$PROJECT_DIR$/forgot_pass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/post_images/009.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/load_data.php" beforeDir="false" afterPath="$PROJECT_DIR$/load_data.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/navbar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts.php" beforeDir="false" afterPath="$PROJECT_DIR$/posts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/server.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upload_post_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/upload_post_form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/users.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +141,9 @@
       <workItem from="1610801126872" duration="1291000" />
       <workItem from="1610824414034" duration="1971000" />
       <workItem from="1610903720034" duration="545000" />
-      <workItem from="1610904282326" duration="2936000" />
+      <workItem from="1610904282326" duration="3103000" />
+      <workItem from="1610976502450" duration="20000" />
+      <workItem from="1610976724012" duration="974000" />
     </task>
     <task id="LOCAL-00001" summary="Sem">
       <created>1605271093217</created>
@@ -263,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610581839592</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Finálne úpravy">
+      <created>1610907375132</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1610907375132</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,7 +283,8 @@
     <MESSAGE value="Kozmetické zmeny" />
     <MESSAGE value="Script, dorobene funkcie" />
     <MESSAGE value="Heslo, Zmena hesla, AboutUs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Heslo, Zmena hesla, AboutUs" />
+    <MESSAGE value="Finálne úpravy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finálne úpravy" />
   </component>
   <component name="WindowStateProjectService">
     <state x="540" y="180" key="#CLI_Interpreters" timestamp="1604931429091">
@@ -309,11 +311,11 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.173.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1610581611990" />
-    <state x="585" y="102" key="CommitChangelistDialog2" timestamp="1610581838855">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="2359" y="180" key="CommitChangelistDialog2" timestamp="1610907374374">
+      <screen x="1920" y="173" width="1440" height="870" />
     </state>
     <state x="585" y="102" key="CommitChangelistDialog2/1920.173.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1610581838855" />
-    <state x="2359" y="180" key="CommitChangelistDialog2/1920.173.1440.870/0.0.1920.1050@1920.173.1440.870" timestamp="1610369857779" />
+    <state x="2359" y="180" key="CommitChangelistDialog2/1920.173.1440.870/0.0.1920.1050@1920.173.1440.870" timestamp="1610907374374" />
     <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1609081489923">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -395,11 +397,11 @@
     </state>
     <state x="431" y="145" key="SettingsEditor/1920.173.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1605704056409" />
     <state x="2243" y="293" key="SettingsEditor/1920.173.1440.870/0.0.1920.1050@1920.173.1440.870" timestamp="1606061981082" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1610581844608">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="2334" y="387" key="Vcs.Push.Dialog.v2" timestamp="1610907377334">
+      <screen x="1920" y="173" width="1440" height="870" />
     </state>
     <state x="552" y="258" key="Vcs.Push.Dialog.v2/1920.173.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1610581844608" />
-    <state x="2334" y="387" key="Vcs.Push.Dialog.v2/1920.173.1440.870/0.0.1920.1050@1920.173.1440.870" timestamp="1610369519168" />
+    <state x="2334" y="387" key="Vcs.Push.Dialog.v2/1920.173.1440.870/0.0.1920.1050@1920.173.1440.870" timestamp="1610907377334" />
     <state x="49" y="0" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog" timestamp="1604931384691">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

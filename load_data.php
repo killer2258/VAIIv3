@@ -33,7 +33,7 @@ if ($result != false) {
                         </td>
                    </tr>
                    <tr>
-                        <td colspan="2">
+                        <td class="leftAlign" colspan="2">
                             ' . $row['content'] . '
                         </td>
                    </tr>
@@ -42,7 +42,7 @@ if ($result != false) {
         $output .= '  
                <tbody>
                    <tr id="remove_row">  
-                        <td>
+                        <td class="leftAlign">
                             <button type="button" name="btn_more" data-vid="' . $comment_id . '" id="btn_more" class="btn btn-primary">Viac</button>
                         </td>  
                    </tr>
